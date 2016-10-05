@@ -3,7 +3,7 @@
 procedure principale()
   i = 12;
   tantque ( i<14 ) 
-    j=1;
+    si (i == 13) j=7; finsi
     i = i+1;
   fintantque
 finproc
