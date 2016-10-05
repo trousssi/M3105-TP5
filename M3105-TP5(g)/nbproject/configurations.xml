@@ -17,6 +17,7 @@
                    projectFiles="true">
       <itemPath>motsCles.txt</itemPath>
       <itemPath>programme.txt</itemPath>
+      <itemPath>testTantQue.txt</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -40,7 +41,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>testTantQue.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
