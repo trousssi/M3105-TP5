@@ -5,6 +5,8 @@
  * Created on 7 décembre 2014, 19:08
  */
 
+///Contient toutes les exceptions levées dans le projet (déclarations et définitions)///
+
 #ifndef EXCEPTIONS_H
 #define	EXCEPTIONS_H
 #include <exception>
