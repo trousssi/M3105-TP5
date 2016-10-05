@@ -81,6 +81,7 @@ class NoeudInstSi : public Noeud {
     Noeud*  m_sequence;
 };
 
+////////////////////////////////////////////////////////////////////////////////
 class NoeudInstTantQue : public Noeud {
 // Classe pour représenter un noeud "instruction tantque"
 //  et ses 2 fils : la condition du si et la séquence d'instruction associée
