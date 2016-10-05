@@ -148,4 +148,4 @@ Noeud*  Interpreteur::instTantQue() {
     Noeud* sequence = seqInst(); 
     testerEtAvancer("fintantque"); //fin de boucle
     return nullptr;
-}
+} //commentaire test
