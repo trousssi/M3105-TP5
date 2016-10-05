@@ -1,3 +1,5 @@
+///représente les symboles du programme///
+
 #include <ctype.h>
 #include <stdlib.h>
 #include <iostream>

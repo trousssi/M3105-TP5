@@ -1,3 +1,5 @@
+///représente les symboles valués (les feuilles de l’arbre abstrait : entiers et variables)///
+
 #include "SymboleValue.h"
 #include "Exceptions.h"
 #include <stdlib.h>

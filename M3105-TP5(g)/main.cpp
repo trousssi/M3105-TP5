@@ -1,3 +1,11 @@
+///le programme principal qui instancie un interpréteur pour analyser et exécuter un programme///
+
+///motsCles.txt: fichier texte qui contient les mots clés du langage 
+//(un mot par ligne... à compléter si besoin)/// 
+
+///programme.txt: un exemple de programme pouvant être exécuté///
+
+
 #include <iostream>
 using namespace std;
 #include "Interpreteur.h"

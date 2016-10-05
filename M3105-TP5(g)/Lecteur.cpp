@@ -1,3 +1,5 @@
+///permet de lire le programme à exécuter symbole par symbole///
+
 #include "Lecteur.h"
 #include "Exceptions.h"
 #include <ctype.h>

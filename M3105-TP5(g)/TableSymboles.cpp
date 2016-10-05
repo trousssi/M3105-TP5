@@ -1,3 +1,5 @@
+///la table des symboles valués///
+
 #include "TableSymboles.h"
 
 TableSymboles::TableSymboles() : m_table() {

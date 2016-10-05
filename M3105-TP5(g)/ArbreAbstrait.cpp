@@ -1,3 +1,5 @@
+///contient toutes les classes nécessaires pour représenter l’arbre abstrait///
+
 #include <stdlib.h>
 #include "ArbreAbstrait.h"
 #include "Symbole.h"

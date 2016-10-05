@@ -8,10 +8,15 @@
       <itemPath>Exceptions.h</itemPath>
       <itemPath>Interpreteur.h</itemPath>
       <itemPath>Lecteur.h</itemPath>
+      <itemPath>Symbole.h</itemPath>
+      <itemPath>SymboleValue.h</itemPath>
+      <itemPath>TableSymboles.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>motsCles.txt</itemPath>
+      <itemPath>programme.txt</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -19,6 +24,9 @@
       <itemPath>ArbreAbstrait.cpp</itemPath>
       <itemPath>Interpreteur.cpp</itemPath>
       <itemPath>Lecteur.cpp</itemPath>
+      <itemPath>Symbole.cpp</itemPath>
+      <itemPath>SymboleValue.cpp</itemPath>
+      <itemPath>TableSymboles.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -32,14 +40,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>Symbole.cpp</itemPath>
-    <itemPath>Symbole.h</itemPath>
-    <itemPath>SymboleValue.cpp</itemPath>
-    <itemPath>SymboleValue.h</itemPath>
-    <itemPath>TableSymboles.cpp</itemPath>
-    <itemPath>TableSymboles.h</itemPath>
-    <itemPath>motsCles.txt</itemPath>
-    <itemPath>programme.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -50,6 +50,9 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <standard>8</standard>
+        </ccTool>
       </compileType>
       <item path="ArbreAbstrait.cpp" ex="false" tool="1" flavor2="0">
       </item>
