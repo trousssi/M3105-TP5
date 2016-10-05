@@ -139,3 +139,6 @@ Noeud* Interpreteur::instSi() {
   return new NoeudInstSi(condition, sequence); // Et on renvoie un noeud Instruction Si
 }
 
+Noeud*  Interpreteur::instTantQue() {
+    return nullptr;
+}
