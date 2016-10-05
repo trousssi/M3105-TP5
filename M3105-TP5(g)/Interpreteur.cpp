@@ -140,5 +140,6 @@ Noeud* Interpreteur::instSi() {
 }
 
 Noeud*  Interpreteur::instTantQue() {
+    test
     return nullptr;
 }
