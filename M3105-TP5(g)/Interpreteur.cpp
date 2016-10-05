@@ -141,11 +141,11 @@ Noeud* Interpreteur::instSi() {
 
 Noeud*  Interpreteur::instTantQue() {
     // <instTantQue> ::=tantque( <expression> ) <seqInst> fintantque
-    testerEtAvancer("tantque");
+    testerEtAvancer("tantque"); //Début de boucle
     testerEtAvancer("(");
-    Noeud* condition = expression();
+    Noeud* condition = expression(); //condition à vérifier
     testerEtAvancer(")");
     Noeud* sequence = seqInst(); 
-    testerEtAvancer("fintantque");
+    testerEtAvancer("fintantque"); //fin de boucle
     return nullptr;
 }
