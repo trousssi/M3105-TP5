@@ -142,5 +142,10 @@ Noeud* Interpreteur::instSi() {
 Noeud*  Interpreteur::instTantQue() {
     // <instTantQue> ::=tantque( <expression> ) <seqInst> fintantque
     testerEtAvancer("tantque");
+    testerEtAvancer("(");
+    Noeud* condition = expression();
+    testerEtAvancer(")");
+    Noeud* sequence = seqInst(); 
+    testerEtAvancer("fintantque");
     return nullptr;
 }
