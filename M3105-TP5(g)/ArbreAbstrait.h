@@ -96,7 +96,6 @@ class NoeudInstTantQue : public Noeud {
     Noeud*  m_sequence;
 };
 
-
 ////////////////////////////////////////////////////////////////////////////////
 class NoeudInstRepeter : public Noeud {
 // Classe pour représenter un noeud "instruction Repeter"
@@ -105,10 +104,27 @@ class NoeudInstRepeter : public Noeud {
     NoeudInstRepeter(Noeud* condition, Noeud* sequence);
      // Construit une "instruction repeter" avec sa condition et sa séquence d'instruction
    ~NoeudInstRepeter() {} // A cause du destructeur virtuel de la classe Noeud
-    int executer();  // Exécute l'instruction repeter : repeter la séquence tantque condition vraie 
+    int executer();  // Exécute l'instruction repeter : repeter la séquence tantque condition vraie  
 
   private:
     Noeud*  m_condition;
     Noeud*  m_sequence;
+};
+
+////////////////////////////////////////////////////////////////////////////////
+class NoeudInstPour : public Noeud {
+// Classe pour représenter un noeud "instruction Pour"
+//  et ses 2 fils : la condition du Pour et la séquence d'instruction associée
+  public:
+    NoeudInstPour(Noeud* condition, Noeud* sequence, Noeud* iterateur, Noeud* incrementeur);
+     // Construit une "instruction Pour" avec sa condition et sa séquence d'instruction
+   ~NoeudInstPour() {} // A cause du destructeur virtuel de la classe Noeud
+    int executer();  // Exécute l'instruction Pour : blabla  
+
+  private:
+    Noeud*  m_condition;
+    Noeud*  m_sequence;
+    Noeud*  m_iterateur;
+    Noeud*  m_incrementeur;
 };
 #endif /* ARBREABSTRAIT_H */

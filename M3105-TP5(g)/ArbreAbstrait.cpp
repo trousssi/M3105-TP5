@@ -111,3 +111,32 @@ int NoeudInstRepeter::executer() {
     } while (m_condition->executer());
   return 0; // La valeur renvoyée ne représente rien !
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// NoeudInstPour
+////////////////////////////////////////////////////////////////////////////////
+
+NoeudInstPour::NoeudInstPour (Noeud* condition, Noeud* sequence, Noeud* iterateur, Noeud* incrementeur)
+: m_condition(condition), m_sequence(sequence), m_iterateur(iterateur), m_incrementeur(incrementeur) {
+}
+
+int NoeudInstPour::executer() {
+    if (m_iterateur!=nullptr && m_incrementeur!=nullptr) {
+        for(m_iterateur->executer(); m_condition->executer(); m_incrementeur->executer()) {
+            m_sequence->executer();
+        }
+    } else if(m_iterateur!=nullptr && m_incrementeur==nullptr) {
+        for(m_iterateur->executer(); m_condition->executer();) {
+            m_sequence->executer();
+        }
+    } else if(m_iterateur==nullptr && m_incrementeur!=nullptr) {
+        for(; m_condition->executer(); m_incrementeur->executer()) {
+            m_sequence->executer();
+        }
+    } else if(m_iterateur==nullptr && m_incrementeur ==nullptr) {
+        for(; m_condition->executer();) {
+            m_sequence->executer();
+        }
+    }
+  return 0; // La valeur renvoyée ne représente rien !
+}
