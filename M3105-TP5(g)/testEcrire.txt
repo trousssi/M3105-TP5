@@ -1,0 +1,9 @@
+ # Fichier de test
+# Les lignes de commentaires commencent par #
+procedure principale()
+ i = 12;
+ j = 40;
+ ecrire ( "bonsoir la", i+j , "ha","ha")
+
+finproc
+# Commentaire Final

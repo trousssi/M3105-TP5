@@ -140,3 +140,14 @@ int NoeudInstPour::executer() {
     }
   return 0; // La valeur renvoyée ne représente rien !
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// NoeudChaine
+////////////////////////////////////////////////////////////////////////////////
+NoeudChaine::NoeudChaine (string chaine) : m_chaine(chaine) {
+}
+
+int NoeudChaine::executer() { 
+  cout << m_chaine <<endl ;
+  return 0; // La valeur renvoyée ne représente rien !
+}

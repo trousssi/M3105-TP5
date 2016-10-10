@@ -17,6 +17,7 @@
                    projectFiles="true">
       <itemPath>motsCles.txt</itemPath>
       <itemPath>programme.txt</itemPath>
+      <itemPath>testEcrire.txt</itemPath>
       <itemPath>testPour.txt</itemPath>
       <itemPath>testRepeter.txt</itemPath>
       <itemPath>testTantQue.txt</itemPath>
@@ -89,6 +90,8 @@
       </item>
       <item path="programme.txt" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="testEcrire.txt" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="testPour.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="testRepeter.txt" ex="false" tool="3" flavor2="0">
@@ -147,6 +150,8 @@
       <item path="motsCles.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="programme.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="testEcrire.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="testPour.txt" ex="false" tool="3" flavor2="0">
       </item>

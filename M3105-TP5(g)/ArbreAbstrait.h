@@ -7,6 +7,7 @@
 #include <vector>
 #include <iostream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 #include "Symbole.h"
@@ -119,7 +120,7 @@ class NoeudInstPour : public Noeud {
     NoeudInstPour(Noeud* condition, Noeud* sequence, Noeud* iterateur, Noeud* incrementeur);
      // Construit une "instruction Pour" avec sa condition et sa séquence d'instruction
    ~NoeudInstPour() {} // A cause du destructeur virtuel de la classe Noeud
-    int executer();  // Exécute l'instruction Pour : blabla  
+    int executer();  // Exécute l'instruction Pour : repeter la sequence pour un iterateur avec une valeur définie incrémenter à chaque fois de incrementeur tant que condition vraie 
 
   private:
     Noeud*  m_condition;
@@ -127,4 +128,19 @@ class NoeudInstPour : public Noeud {
     Noeud*  m_iterateur;
     Noeud*  m_incrementeur;
 };
+
+
+////////////////////////////////////////////////////////////////////////////////
+class NoeudChaine : public Noeud {
+// Classe pour représenter un noeud "chaine"
+  public:
+    NoeudChaine(std::string chaine);
+     // Construit une "chaine"
+   ~NoeudChaine() {} // A cause du destructeur virtuel de la classe Noeud
+    int executer();  // Renvoi la chaine contenu dans le noeud 
+
+  private:
+      std::string m_chaine;
+};
+
 #endif /* ARBREABSTRAIT_H */
