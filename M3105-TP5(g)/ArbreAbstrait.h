@@ -8,6 +8,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <vector>
 using namespace std;
 
 #include "Symbole.h"
@@ -130,17 +131,22 @@ class NoeudInstPour : public Noeud {
 };
 
 
+
+
 ////////////////////////////////////////////////////////////////////////////////
-class NoeudChaine : public Noeud {
-// Classe pour représenter un noeud "chaine"
+class NoeudEcrire : public Noeud {
+// Classe pour représenter un noeud "Ecrire"
+//  et ses fils : les instruction à ecrire
   public:
-    NoeudChaine(std::string chaine);
-     // Construit une "chaine"
-   ~NoeudChaine() {} // A cause du destructeur virtuel de la classe Noeud
-    int executer();  // Renvoi la chaine contenu dans le noeud 
+    NoeudEcrire();
+     // Construit un "Ecire" avec son vecteur d'élements
+   ~NoeudEcrire() {} // A cause du destructeur virtuel de la classe Noeud
+    void ajoute(Noeud* elem) override;
+    int executer();  // Exécute l'instruction Ecrire : afficher à l'écran tout ce qu'il contient 
 
   private:
-      std::string m_chaine;
+    vector<Noeud*> m_elements;
 };
+
 
 #endif /* ARBREABSTRAIT_H */

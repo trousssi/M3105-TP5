@@ -1,6 +1,7 @@
 ///contient toutes les classes nécessaires pour représenter l’arbre abstrait///
 
 #include <stdlib.h>
+#include <typeinfo>
 #include "ArbreAbstrait.h"
 #include "Symbole.h"
 #include "SymboleValue.h"
@@ -141,13 +142,27 @@ int NoeudInstPour::executer() {
   return 0; // La valeur renvoyée ne représente rien !
 }
 
+
+
 ////////////////////////////////////////////////////////////////////////////////
-// NoeudChaine
+// NoeudEcrire
 ////////////////////////////////////////////////////////////////////////////////
-NoeudChaine::NoeudChaine (string chaine) : m_chaine(chaine) {
+
+NoeudEcrire::NoeudEcrire () {
+    
 }
 
-int NoeudChaine::executer() { 
-  cout << m_chaine <<endl ;
+void NoeudEcrire::ajoute(Noeud* elem) {
+    m_elements.push_back(elem);
+}
+
+int NoeudEcrire::executer() {
+    for (auto e: m_elements ) {
+        if (typeid(*e)==typeid(SymboleValue) && *((SymboleValue*)e)=="<CHAINE>" ) {
+            cout << ((SymboleValue*)e)->getchaine();
+        } else {
+            cout << e->executer();
+        }
+    }
   return 0; // La valeur renvoyée ne représente rien !
 }

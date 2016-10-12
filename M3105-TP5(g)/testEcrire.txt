@@ -3,7 +3,7 @@
 procedure principale()
  i = 12;
  j = 40;
- ecrire ( "bonsoir la", i+j , "ha","ha")
+ ecrire ( "bonsoir")
 
 finproc
 # Commentaire Final

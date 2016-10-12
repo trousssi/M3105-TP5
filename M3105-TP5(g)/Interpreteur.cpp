@@ -197,15 +197,17 @@ Noeud* Interpreteur::instEcrire() {
     // <instEcrire> ::= ecrire( <expression> | <chaine> {, <expression> | <chaine> })
     testerEtAvancer("ecrire");
     testerEtAvancer("(");
-    //TODO vector
+    NoeudEcrire* ecrire =  new NoeudEcrire();
+    Noeud* chaine = nullptr;
     bool repeter;
     do {
         repeter = false;
-        if (m_lecteur.getSymbole() != "<VARIABLE>") {
-            chaine = m_lecteur.getSymbole().getChaine();
+        if (m_lecteur.getSymbole() == "<CHAINE>") {
+            chaine = m_table.chercheAjoute(m_lecteur.getSymbole()); // on ajoute la chaine à la table
+            ecrire->ajoute(chaine);
             m_lecteur.avancer();
         } else {
-            expre = expression(); //condition à vérifier
+            ecrire->ajoute(expression()); //condition à vérifier
         }
         if (m_lecteur.getSymbole() == ",") {
             repeter = true;
@@ -213,7 +215,6 @@ Noeud* Interpreteur::instEcrire() {
         }
     } while (repeter);
     testerEtAvancer(")");
-    
-    return nullptr;
+    return ecrire;
     
 } 

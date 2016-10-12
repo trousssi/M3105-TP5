@@ -10,10 +10,17 @@
             <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/programme.txt</file>
             <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/testTantQue.txt</file>
             <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/ArbreAbstrait.h</file>
-            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/Interpreteur.h</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/SymboleValue.h</file>
             <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/motsCles.txt</file>
-            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/main.cpp</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/Symbole.h</file>
             <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/ArbreAbstrait.cpp</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/Lecteur.h</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/SymboleValue.cpp</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/TableSymboles.cpp</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/testEcrire.txt</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/Interpreteur.h</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/main.cpp</file>
+            <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/TableSymboles.h</file>
             <file>file:/users/info/etu-s3/trousssi/M3105/M3105-TP5(g)/M3105-TP5(g)/Interpreteur.cpp</file>
         </group>
     </open-files>
