@@ -159,10 +159,32 @@ void NoeudEcrire::ajoute(Noeud* elem) {
 int NoeudEcrire::executer() {
     for (auto e: m_elements ) {
         if (typeid(*e)==typeid(SymboleValue) && *((SymboleValue*)e)=="<CHAINE>" ) {
-            cout << ((SymboleValue*)e)->getchaine();
+            cout << ((SymboleValue*)e)->getChaine();
         } else {
             cout << e->executer();
         }
+    }
+  return 0; // La valeur renvoyée ne représente rien !
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// NoeudLire
+////////////////////////////////////////////////////////////////////////////////
+
+NoeudLire::NoeudLire () {
+    
+}
+
+void NoeudLire::ajoute(Noeud* elem) {
+    m_elements.push_back(elem);
+}
+
+int NoeudLire::executer() {
+    for (auto e: m_elements ) {
+        cout << ((SymboleValue*)e)->getChaine() << "=";
+        int x;
+        cin >> x;
+        ((SymboleValue*)e)->setValeur(x);
     }
   return 0; // La valeur renvoyée ne représente rien !
 }

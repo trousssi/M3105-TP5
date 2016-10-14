@@ -1,9 +1,10 @@
- # Fichier de test
+# Fichier de test
 # Les lignes de commentaires commencent par #
 procedure principale()
  i = 12;
  j = 40;
- ecrire ( "bonsoir", i+j , "quarente-douze")
-
+ lire(i,j,a)
+ ecrire(a)
 finproc
 # Commentaire Final
+

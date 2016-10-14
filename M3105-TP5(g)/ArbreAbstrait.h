@@ -130,16 +130,13 @@ class NoeudInstPour : public Noeud {
     Noeud*  m_incrementeur;
 };
 
-
-
-
 ////////////////////////////////////////////////////////////////////////////////
 class NoeudEcrire : public Noeud {
 // Classe pour représenter un noeud "Ecrire"
 //  et ses fils : les instruction à ecrire
   public:
     NoeudEcrire();
-     // Construit un "Ecire" avec son vecteur d'élements
+     // Construit un "Ecrire" avec son vecteur d'élements
    ~NoeudEcrire() {} // A cause du destructeur virtuel de la classe Noeud
     void ajoute(Noeud* elem) override;
     int executer();  // Exécute l'instruction Ecrire : afficher à l'écran tout ce qu'il contient 
@@ -148,5 +145,19 @@ class NoeudEcrire : public Noeud {
     vector<Noeud*> m_elements;
 };
 
+////////////////////////////////////////////////////////////////////////////////
+class NoeudLire : public Noeud {
+// Classe pour représenter un noeud "Lire"
+//  et ses fils : les instruction à lire
+  public:
+    NoeudLire();
+     // Construit un "Lire" avec son vecteur d'élements
+   ~NoeudLire() {} // A cause du destructeur virtuel de la classe Noeud
+    void ajoute(Noeud* elem) override;
+    int executer();  // Exécute l'instruction Lire : récupérer à l'écran tout ce qu'il a été saisi
+
+  private:
+    vector<Noeud*> m_elements;
+};
 
 #endif /* ARBREABSTRAIT_H */
