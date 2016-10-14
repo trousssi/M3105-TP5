@@ -74,14 +74,41 @@ int NoeudOperateurBinaire::executer() {
 // NoeudInstSi
 ////////////////////////////////////////////////////////////////////////////////
 
-NoeudInstSi::NoeudInstSi(Noeud* condition, Noeud* sequence)
-: m_condition(condition), m_sequence(sequence) {
+NoeudInstSi::NoeudInstSi(){
 }
 
 int NoeudInstSi::executer() {
-  if (m_condition->executer()) m_sequence->executer();
+ /* int nbCond = m_conditions.size();
+  int nbSeq = m_sequences.size();
+  bool verifie = false;
+  int i = 0;
+  while (i<nbCond && !verifie) {
+    if (m_conditions[i]) {
+        m_sequences[i]->executer();
+        verifie = true;
+    }
+    i++;
+  }*/
+    
+    int i =0;
+    while(i<m_conditions.size() && m_conditions[i]!= NULL && ! m_conditions[i]->executer()) {
+        i++;
+    }
+    if (i<m_conditions.size()) {
+        m_sequences[i]->executer();
+    } else {
+        m_sequences[m_sequences.size()-1]->executer();
+    }
   return 0; // La valeur renvoyée ne représente rien !
+
 }
+void NoeudInstSi::ajouterCondition(Noeud* condition) {
+    m_conditions.push_back(condition);
+}
+void NoeudInstSi::ajouterSequence(Noeud* sequence) {
+    m_sequences.push_back(sequence);
+}
+    
 
 ////////////////////////////////////////////////////////////////////////////////
 // NoeudInstTanQue
