@@ -18,7 +18,7 @@ void Interpreteur::tester(const string & symboleAttendu) const throw (SyntaxeExc
   static char messageWhat[256];
   if (m_lecteur.getSymbole() != symboleAttendu) {
     sprintf(messageWhat,
-            "Ligne %d, Colonne %d - Erreur de syntaxe - Symbole attendu : %s - Symbole trouvé : %s",
+            "Ligne %o, Colonne %o - Erreur de syntaxe - Symbole attendu : %s - Symbole trouvé : %s",
             m_lecteur.getLigne(), m_lecteur.getColonne(),
             symboleAttendu.c_str(), m_lecteur.getSymbole().getChaine().c_str());
     throw SyntaxeException(messageWhat);
@@ -36,7 +36,7 @@ void Interpreteur::erreur(const string & message) const throw (SyntaxeException)
   // Utilisé lorsqu'il y a plusieurs symboles attendus possibles...
   static char messageWhat[256];
   sprintf(messageWhat,
-          "Ligne %d, Colonne %d - Erreur de syntaxe - %s - Symbole trouvé : %s",
+          "Ligne %o, Colonne %o - Erreur de syntaxe - %s - Symbole trouvé : %s",
           m_lecteur.getLigne(), m_lecteur.getColonne(), message.c_str(), m_lecteur.getSymbole().getChaine().c_str());
   throw SyntaxeException(messageWhat);
 }
@@ -84,17 +84,30 @@ Noeud* Interpreteur::inst() {
   else if (m_lecteur.getSymbole() == "lire")
       return instLire();
   // Compléter les alternatives chaque fois qu'on rajoute une nouvelle instruction
-  else erreur("Instruction incorrecte");
+  else {
+      try {
+          erreur("Instruction incorrecte");
+      } catch (InterpreteurException & e) {
+        cout << e.what() << endl;
+        m_lecteur.avancer();
+        return nullptr;
+      }     
+  }
 }
-
 Noeud* Interpreteur::affectation() {
   // <affectation> ::= <variable> = <expression> 
-  tester("<VARIABLE>");
+  tester("<VARIABLE>"); // condition déjà vérifié avant l'appel de la fonction. Ce tester ne doit pas lever d'exception.
   Noeud* var = m_table.chercheAjoute(m_lecteur.getSymbole()); // La variable est ajoutée à la table eton la mémorise
   m_lecteur.avancer();
-  testerEtAvancer("=");
-  Noeud* exp = expression();             // On mémorise l'expression trouvée
-  return new NoeudAffectation(var, exp); // On renvoie un noeud affectation
+  try { testerEtAvancer("=");
+        Noeud* exp = expression();              // On mémorise l'expression trouvée
+        return new NoeudAffectation(var, exp); // On renvoie un noeud affectation
+  } catch (InterpreteurException & e) { 
+        cout << e.what() << endl;
+        // How To Faire ce merdier. Help!!
+        return nullptr; // le noeud n'est pas crée
+      }     
+  
 }
 
 Noeud* Interpreteur::expression() {
