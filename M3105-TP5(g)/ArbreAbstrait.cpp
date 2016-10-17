@@ -78,18 +78,6 @@ NoeudInstSi::NoeudInstSi(){
 }
 
 int NoeudInstSi::executer() {
- /* int nbCond = m_conditions.size();
-  int nbSeq = m_sequences.size();
-  bool verifie = false;
-  int i = 0;
-  while (i<nbCond && !verifie) {
-    if (m_conditions[i]) {
-        m_sequences[i]->executer();
-        verifie = true;
-    }
-    i++;
-  }*/
-    
     int i =0;
     while(i<m_conditions.size() && m_conditions[i]!= NULL && ! m_conditions[i]->executer()) {
         i++;
