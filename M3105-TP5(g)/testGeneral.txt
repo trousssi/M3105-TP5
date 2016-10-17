@@ -1,27 +1,40 @@
 procedure principale()
     i=0;
+
+
     ecrire("bonsoir, entrez un nombre entre 1 et 3 compris.")
+
+
     tantque(i<1 ou i>3)
         lire(i)
     fintantque
+
+
     lire(i)
+
+
     j=10;
+
+
     repeter
         j=j+1;
-    jusqua(j==15)
+    jusqua(j<=15)
 
-    ecrire(" j=",j)
+
+    ecrire("j=",j)
+
 
     si(i==1)
-        ecrire(" bonsoir ")
+        ecrire("bonsoir")
     sinonsi(i==2)
-        ecrire(" bonjour ")
+        ecrire("bonjour")
     sinon
-        ecrire(" salut ")
+        ecrire("salut")
     finsi
 
+
     pour(;i<j;i=i+1)
-        ecrire(" i change de valeur ")
+        ecrire("i change de valeur: ", i)
     finpour
     
 finproc

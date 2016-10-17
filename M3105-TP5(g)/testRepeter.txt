@@ -1,9 +1,9 @@
  # Fichier de test
 # Les lignes de commentaires commencent par #
 procedure principale()
-  i = 12;
+  i = 0;
   repeter
     i = i+1;
-  jusqua ( i<=14 )
+  jusqua ( i<=16 )
 finproc
 # Commentaire Final
