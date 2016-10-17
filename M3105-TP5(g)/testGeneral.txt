@@ -1,0 +1,29 @@
+procedure principale()
+    i=0;
+    ecrire("bonsoir, entrez un nombre entre 1 et 3 compris.")
+    tantque(i<1 ou i>3)
+        lire(i)
+    fintantque
+    lire(i)
+    j=10;
+    repeter
+        j=j+1;
+    jusqua(j==15)
+
+    ecrire(" j=",j)
+
+    si(i==1)
+        ecrire(" bonsoir ")
+    sinonsi(i==2)
+        ecrire(" bonjour ")
+    sinon
+        ecrire(" salut ")
+    finsi
+
+    pour(;i<j;i=i+1)
+        ecrire(" i change de valeur ")
+    finpour
+    
+finproc
+# Guillemets
+# InstRepeter

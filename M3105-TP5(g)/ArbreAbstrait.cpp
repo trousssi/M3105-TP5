@@ -186,9 +186,10 @@ void NoeudEcrire::ajoute(Noeud* elem) {
 int NoeudEcrire::executer() {
     for (auto e: m_elements ) {
         if (typeid(*e)==typeid(SymboleValue) && *((SymboleValue*)e)=="<CHAINE>" ) {
-            cout << ((SymboleValue*)e)->getChaine();
+            string s = ((SymboleValue*)e)->getChaine();
+            cout << s.substr(1,s.size()-2) << endl;
         } else {
-            cout << e->executer();
+            cout << e->executer() << endl;
         }
     }
   return 0; // La valeur renvoyée ne représente rien !
