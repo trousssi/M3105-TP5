@@ -263,11 +263,12 @@ int NoeudEcrire::executer() {
     for (auto e: m_elements ) {
         if (typeid(*e)==typeid(SymboleValue) && *((SymboleValue*)e)=="<CHAINE>" ) {
             string s = ((SymboleValue*)e)->getChaine();
-            cout << s.substr(1,s.size()-2) << endl;
+            cout << s.substr(1,s.size()-2);
         } else {
-            cout << e->executer() << endl;
+            cout << e->executer();
         }
     }
+  cout << endl;
   return 0; // La valeur renvoyée ne représente rien !
 }
 void NoeudEcrire::traduitEnCPP(ostream & cout,unsigned int indentation) const { //TODO

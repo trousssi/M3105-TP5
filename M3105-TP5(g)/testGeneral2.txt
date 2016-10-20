@@ -1,0 +1,43 @@
+procedure principale()
+    a = 0;
+    b = 12;
+    ecrire("permutation de a: ", a, " avec b: ", b)
+    c = a;
+    a = b;
+    b = c;
+    ecrire("on obtient alors a = ", a, " et b = ", b)
+
+    tantque(a>0)
+        a=a-1;
+        si (a==3)
+            ecrire("a=3, alors b passe de:", b)
+            pour (k=b;k>7;k=k-1)
+                b=b-1;
+            finpour
+        ecrire("a la valeur: ",b)
+        sinonsi (a==6)
+            ecrire("a=6, entrer un nombre q:")
+            q=9;
+            repeter
+                si (q==4) 
+                    ecrire("4x4")
+                sinon
+                    ecrire("q est égal à ",q)
+                finsi
+                q=q-1;
+            jusqua(q>0)
+        sinonsi (a==10)
+            p=0;
+            ecrire("a=10, entrer un nombre p:")
+            lire(p)
+            pour (;p>0;)
+                p=p-1;
+            finpour
+        sinon
+            ecrire("La boucle avance...et a = ", a, ".")
+        finsi
+    fintantque
+
+
+    ecrire("fin du programme.")
+finproc

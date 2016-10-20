@@ -25,18 +25,12 @@ procedure principale()
     ecrire("j=",j)
 
 
-    si(i==1)
-        ecrire("bonsoir")
-    sinonsi(i==2)
-        ecrire("bonjour")
+    si(i<25)
+        ecrire("plus petit que 25")
+    sinonsi(i<75)
+        ecrire("entre 25 et 75")
     sinon
-        ecrire("salut")
+        ecrire("plus grand que 75")
     finsi
-    
-    ecrire("j=",j)
-
-    pour(;i<j;i=i+1)
-        ecrire("i change de valeur: ", i)
-    finpour
     
 finproc
