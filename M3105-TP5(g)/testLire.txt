@@ -3,8 +3,7 @@
 procedure principale()
  i = 12;
  j = 40;
- lire(i,j,a)
- ecrire(a)
+ lire(i,j)
 finproc
 # Commentaire Final
 
