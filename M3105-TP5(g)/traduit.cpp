@@ -1,6 +1,6 @@
+#include <iostream>
+using namespace std;
 int main() {
-    int i=12;
-    int j=40;
-    cout << "bonsoir" << i+j << "quarente-douze";
+    cout << "Hello World !";
     return 0;
 }
