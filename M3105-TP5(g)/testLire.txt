@@ -1,17 +1,27 @@
 # Fichier de test
 # Les lignes de commentaires commencent par #
 procedure principale()
+    ecrire("__________TEST DE LA FONCTION LIRE__________")
+    ecrire("lecture de i et de j: saisie manuelle.")
+    ecrire("")
     i = 12;
     j = 40;
-    ecrire("Avant Lire")
+    ecrire("Avant la fonction lire:")
     ecrire("i=",i)
     ecrire("j=",j)
+    ecrire("________________________")
 
+    ecrire("Début de la lecture de i et j:")
     lire(i,j)
 
-    ecrire("Aprés Lire")
+    ecrire("________________________")
+
+    ecrire("Après la fonction lire:")
     ecrire("i=",i)
     ecrire("j=",j)
+
+    ecrire("")
+    ecrire("__________FIN DU TEST__________")
 
 finproc
 # Commentaire Final

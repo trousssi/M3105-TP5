@@ -2,71 +2,78 @@
 # Fichier de test
 # Les lignes de commentaires commencent par #
 procedure principale()
+    ecrire("__________TEST DE LA FONCTION SI__________")
+    ecrire("----")
     ecrire("")
     ecrire("________________________")
     ecrire("1ere méthode: Si Seul")
     ecrire("")
 
     i=1;
-    j=1;
+    j=0;
 
-    ecrire("Avant Si")
+    ecrire("Avant la fonction si:")
     ecrire("i=",i)
     ecrire("j=",j)
 
-    si (i>14)
+    ecrire("-->si i>0 alors j prend pour valeur 1")
+    si (i>0)
         j=1;
     finsi
 
-    ecrire("Apres Si")
+    ecrire("Apres la fonction si:")
     ecrire("i=",i)
     ecrire("j=",j)
 
-
+    ecrire("")
     ecrire("________________________")
-    ecrire("2eme méthode: Si Sinon")
+    ecrire("2eme méthode: Si + Sinon")
     ecrire("")
 
-    i=1;
-    j=1;
-
-    ecrire("Avant Si")
+    i=10;
+    j=10;
+    ecrire("Avant la fonction si:")
     ecrire("i=",i)
     ecrire("j=",j)
 
-    si (i>14)
-        j=1;
+    ecrire("-->si i=0 alors j prend pour valeur 0 sinon j prend pour valeur 1")
+    si (i==0)
+        j=0;
     sinon
-        j=3;
+        j=1;
     finsi
 
-    ecrire("Apres Si")
+    ecrire("Apres la fonction si:")
     ecrire("i=",i)
     ecrire("j=",j)
 
     ecrire("")
     ecrire("________________________")
-    ecrire("3eme méthode: Si SinonSi Sinon")
+    ecrire("3eme méthode: Si + SinonSi + Sinon")
     ecrire("")
 
     i=1;
-    j=1;
+    j=0;
 
-    ecrire("Avant Si")
+    ecrire("Avant la fonction si:")
     ecrire("i=",i)
     ecrire("j=",j)
 
-    si (i>14)
+    ecrire("-->si i=0 alors j prend pour valeur 1 sinon si i=1 j prend pour valeur 2 sinon j prend pour valeur 3")
+    si (i==0)
         j=1;
-    sinonsi (i==14)
+    sinonsi (i==1)
         j=2;
     sinon
         j=3;
     finsi
 
-    ecrire("Apres Si")
+    ecrire("Apres la fonction si:")
     ecrire("i=",i)
     ecrire("j=",j)
+
+    ecrire("")
+    ecrire("__________FIN DU TEST__________")
 
 finproc
 # Commentaire Final

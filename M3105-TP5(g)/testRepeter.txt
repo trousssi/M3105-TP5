@@ -1,12 +1,19 @@
  # Fichier de test
 # Les lignes de commentaires commencent par #
 procedure principale()
+    ecrire("__________TEST DE LA FONCTION REPETER__________")
+    ecrire("répéter jusqu'à que  i >= 10 : i allant de 0 à 10")
+    ecrire("")
     i = 0;
-    ecrire("i=",i," debut de la boucle")
+    ecrire("i=",i," - début de la boucle")
+    ecrire("________________________")
     repeter
         i = i+1;
-        ecrire("i=", i)
-    jusqua ( i<=16 )
-    ecrire("i=",i, " fin de la boucle" )
+        ecrire("itération - i=", i)
+    jusqua ( i<10 )
+    ecrire("________________________")
+    ecrire("i=",i, " - fin de la boucle" )
+    ecrire("")
+    ecrire("__________FIN DU TEST__________")
 finproc
 # Commentaire Final

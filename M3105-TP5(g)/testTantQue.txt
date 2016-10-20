@@ -1,10 +1,21 @@
 # Fichier de test
 # Les lignes de commentaires commencent par #
 procedure principale()
-  i = 12;
-  tantque ( i<14 ) 
-    si (i == 13) j=7; finsi
-    i = i+1;
-  fintantque
+    ecrire("__________TEST DE LA FONCTION POUR__________")
+    ecrire("tant que i<10 : i allant de 0 à 10")
+    ecrire("")
+    i = 0;
+    ecrire("Avant fonction: i=",i)
+    ecrire("________________________")
+    tantque ( i<10 ) 
+        ecrire("Pendant: i=",i)
+        i = i+1;
+        
+    fintantque
+    ecrire("________________________")
+    ecrire("Après fonction: i=",i)
+
+    ecrire("")
+    ecrire("__________FIN DU TEST__________")
 finproc
 # Commentaire Final
