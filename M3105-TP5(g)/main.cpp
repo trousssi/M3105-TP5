@@ -12,7 +12,6 @@ using namespace std;
 #include "Exceptions.h"
 
 int main(int argc, char* argv[]) {
-    ofstream fichier("traduit.cpp", ios::out);
     string nomFich;
     if (argc != 2) {
         cout << "Usage : " << argv[0] << " nom_fichier_source" << endl << endl;
@@ -33,6 +32,8 @@ int main(int argc, char* argv[]) {
         if (interpreteur.getArbre()!=nullptr) interpreteur.traduitEnCPP(cout,0); //interpreteur.getArbre()->executer();
         // Et on vérifie qu'il a fonctionné en regardant comment il a modifié la table des symboles
         cout << endl << "================ Table des symboles apres exécution : " << interpreteur.getTable();
+        ofstream cout("traduit.cpp");
+        interpreteur.traduitEnCPP(cout,0);
     } catch (InterpreteurException & e) {
         cout << e.what() << endl;
     }

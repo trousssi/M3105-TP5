@@ -2,10 +2,10 @@ procedure principale()
     i=0;
 
 
-    ecrire("bonsoir, entrez un nombre entre 1 et 3 compris.")
+    ecrire("bonsoir, entrez un nombre plus petit que 100.")
 
 
-    tantque(i<1 ou i>3)
+    tantque(i<100)
         lire(i)
     fintantque
 
@@ -31,7 +31,8 @@ procedure principale()
     sinon
         ecrire("salut")
     finsi
-
+    
+    ecrire("j=",j)
 
     pour(;i<j;i=i+1)
         ecrire("i change de valeur: ", i)

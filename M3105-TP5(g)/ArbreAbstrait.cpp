@@ -236,9 +236,9 @@ int NoeudInstPour::executer() {
 void NoeudInstPour::traduitEnCPP(ostream & cout,unsigned int indentation) const {
     //En-tête
     cout << setw(4*indentation) << "" << "for (";
-    m_iterateur->traduitEnCPP(cout,0); cout << "; ";
+    if (m_iterateur) m_iterateur->traduitEnCPP(cout,0); cout << "; ";
     m_condition->traduitEnCPP(cout,0); cout << "; ";
-    m_incrementeur->traduitEnCPP(cout,0); cout << ") {" << endl;
+    if (m_incrementeur) m_incrementeur->traduitEnCPP(cout,0); cout << ") {" << endl;
     //Corps
     m_sequence->traduitEnCPP(cout,indentation+1);
     //Fin
