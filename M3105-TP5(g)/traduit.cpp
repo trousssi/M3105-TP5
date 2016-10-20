@@ -1,25 +1,38 @@
 int main() {
-    i=0;
-    cout << "bonsoir, entrez un nombre plus petit que 100.";
-    while (i<100) {
-        cin >> i;
+    a=0;
+    b=12;
+    cout << "permutation de a:" << a << "avec b:" << b;
+    c=a;
+    a=b;
+    b=c;
+    cout << "on obtient alors a=" << a << "et b=" << b;
+    while (a<12) {
+        a=a+1;
+        if (a==3) {
+            cout << "b passe de:" << b;
+            for (k=b; k>7; k=k-1) {
+                b=b-1;
+            }
+            cout << "| à: " << b;
+        } else if (a==6) {
+            quatre=9;
+            do {
+                if (quatre==4) {
+                    cout << "4x4";
+                } else {
+                    cout << "tsss....";
+                } 
+            } while (quatre>0);
+        } else if (a==10) {
+            patate=0;
+            cin >> patate;
+            for (; patate>0; ) {
+                patate=patate-1;
+            }
+        } else {
+            cout << "La boucle avance...et a = " << a << ".";
+        } 
     }
-    cin >> i;
-    j=10;
-    do {
-        j=j+1;
-    } while (j<=15);
-    cout << "j=" << j;
-    if (i==1) {
-        cout << "bonsoir";
-    } else if (i==2) {
-        cout << "bonjour";
-    } else {
-        cout << "salut";
-    } 
-    cout << "j=" << j;
-    for (; i<j; i=i+1) {
-        cout << "i change de valeur: " << i;
-    }
+    cout << "fin du programme.";
     return 0;
 }
