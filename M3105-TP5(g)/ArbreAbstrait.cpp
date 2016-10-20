@@ -272,9 +272,10 @@ int NoeudEcrire::executer() {
 }
 void NoeudEcrire::traduitEnCPP(ostream & cout,unsigned int indentation) const { //TODO
     cout << setw(4*indentation) << "" << "cout";
-    for (auto e : m_elements) {
-        cout << " << "; 
-        e->traduitEnCPP(cout,0);
+    for (auto e: m_elements) {
+        cout << " << ";
+        if (*((SymboleValue*)e)=="<CHAINE>") {cout << ((SymboleValue*)e)->getChaine();}
+        else {((SymboleValue*)e)->traduitEnCPP(cout,0);}
     }
     cout << ";" << endl;
     
@@ -302,5 +303,18 @@ int NoeudLire::executer() {
   return 0; // La valeur renvoyée ne représente rien !
 }
 void NoeudLire::traduitEnCPP(ostream & cout,unsigned int indentation) const {
-    
+    cout << setw(4*indentation) << "" << "cin";
+    for (auto e: m_elements) {
+        cout << " >> ";
+        //Si c'est bien une variable
+        if (*((SymboleValue*)e)=="<VARIABLE>") {
+            if (*((SymboleValue*)e) != nullptr) { //Si la varible a déjà été initialisée
+                ((SymboleValue*)e)->traduitEnCPP(cout,0); 
+            } else {
+                cout << "non initialisé";
+            }
+        }
+        
+    }
+    cout << ";" << endl;
 }

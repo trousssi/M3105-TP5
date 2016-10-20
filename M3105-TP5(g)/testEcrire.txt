@@ -3,7 +3,7 @@
 procedure principale()
  i = 12;
  j = 40;
- ecrire ( "bonsoir", i+j , "quarente-douze")
+ ecrire("bonsoir",i+j,"quarente-douze")
 
 finproc
 # Commentaire Final
