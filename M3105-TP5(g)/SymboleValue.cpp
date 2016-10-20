@@ -25,3 +25,8 @@ ostream & operator<<(ostream & cout, const SymboleValue & symbole) {
   else cout << "indefinie ";
   return cout;
 }
+
+void SymboleValue::traduitEnCPP(ostream & cout,unsigned int indentation) const {
+     if (!m_defini) throw IndefiniException(); // on lève une exception si valeur non définie
+     cout << this->getChaine();
+}

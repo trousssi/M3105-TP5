@@ -1,14 +1,12 @@
 procedure principale()
-
-
-     i=0;
+    i=0;
     
 
     ecrire("bonsoir, entrez un nombre entre 1 et 3 compris.")
 
 
     tantque
-
+    fintantque
 
     lire(i)
 
@@ -16,7 +14,7 @@ procedure principale()
     j=10;
 
 
-    repete
+    repeter
         j=j+1;
     jusqua(j<=15)
 

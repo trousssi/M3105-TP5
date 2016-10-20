@@ -88,11 +88,12 @@ Noeud* Interpreteur::inst() {
         else {
             erreur("Instruction incorrecte");}
         }
-    catch (InterpreteurException & e) {
+    catch (InterpreteurException & e) { //erreur de syntaxe dans l'instruction
         cout << e.what() << endl;
         while (m_lecteur.getSymbole() == "<VARIABLE>" || m_lecteur.getSymbole() == "si" || m_lecteur.getSymbole() == "tantque" || m_lecteur.getSymbole() == "repeter" || m_lecteur.getSymbole() == "pour" || m_lecteur.getSymbole() == "ecrire" || m_lecteur.getSymbole() == "lire") {
             m_lecteur.avancer(); 
         }
+        
         return nullptr;
 
     }
@@ -283,3 +284,11 @@ Noeud* Interpreteur::instLire() {
     testerEtAvancer(")");
     return lire;   
 } 
+
+void Interpreteur::traduitEnCPP(ostream & cout, unsigned int indentation) const {
+    cout << setw(4*indentation) << "" << "int main() {" << endl;
+    
+    getArbre()->traduitEnCPP(cout,indentation+1);
+    cout << setw(4*(indentation+1)) << "" << "return 0;" << endl;
+    cout << setw(4*indentation) << "" << "}" << endl;       
+}
