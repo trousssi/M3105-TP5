@@ -198,7 +198,8 @@ Noeud*  Interpreteur::instRepeter() {
     testerEtAvancer("jusqua"); // condition de fin de boucle
     testerEtAvancer("(");
     Noeud* condition = expression(); //condition à tester
-    testerEtAvancer(")"); // fin de boucle
+    testerEtAvancer(")");
+    testerEtAvancer(";"); // fin de boucle
     return new NoeudInstRepeter(condition,sequence);
 }
 

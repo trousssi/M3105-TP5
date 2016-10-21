@@ -27,11 +27,11 @@ void NoeudSeqInst::ajoute(Noeud* instruction) {
 void NoeudSeqInst::traduitEnCPP(ostream & cout,unsigned int indentation) const{
     for (auto n : m_instructions ) {
         n->traduitEnCPP(cout,indentation); // on traduit chaque instruction de la séquence
-        if(typeid(*n) == typeid(NoeudAffectation) /*||
-           typeid(m_instructions[i]) == typeid(NoeudAffectation) ||
-           typeid(m_instructions[i]) == typeid(NoeudAffectation) ||
-           typeid(m_instructions[i]) == typeid(NoeudAffectation) ||
-           typeid(m_instructions[i]) == typeid(NoeudAffectation) ||*/     ) cout << ";" << endl; 
+        if(typeid(*n) == typeid(NoeudAffectation) ||
+           typeid(*n) == typeid(NoeudInstRepeter) ||
+           typeid(*n) == typeid(NoeudLire) ||
+           typeid(*n) == typeid(NoeudEcrire)
+        ) cout << ";" << endl; 
     }
 }
 
@@ -202,7 +202,8 @@ void NoeudInstRepeter::traduitEnCPP(ostream & cout,unsigned int indentation) con
     //Fin
     cout << setw(4*indentation) << "" << "} while (!(";
     m_condition->traduitEnCPP(cout,0);
-    cout << "));" << endl;
+    cout << "))";
+    //cout << ";" << endl;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -278,7 +279,7 @@ void NoeudEcrire::traduitEnCPP(ostream & cout,unsigned int indentation) const { 
         if (*((SymboleValue*)e)=="<CHAINE>") {cout << ((SymboleValue*)e)->getChaine();}
         else {((SymboleValue*)e)->traduitEnCPP(cout,0);}
     }
-    cout << ";" << endl;
+    //cout << ";" << endl;
     
 }
 
@@ -310,5 +311,5 @@ void NoeudLire::traduitEnCPP(ostream & cout,unsigned int indentation) const {
         ((SymboleValue*)e)->traduitEnCPP(cout,0) ; 
              
     }
-    cout << ";" << endl;
+    //cout << ";" << endl;
 }
