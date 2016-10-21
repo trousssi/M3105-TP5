@@ -10,7 +10,7 @@ procedure principale()
     repeter
         i = i+1;
         ecrire("itération - i=", i)
-    jusqua ( i<10 )
+    jusqua ( i>=10 )
     ecrire("________________________")
     ecrire("i=",i, " - fin de la boucle" )
     ecrire("")

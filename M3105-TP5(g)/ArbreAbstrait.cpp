@@ -191,7 +191,7 @@ NoeudInstRepeter::NoeudInstRepeter (Noeud* condition, Noeud* sequence)
 int NoeudInstRepeter::executer() {
     do {
         m_sequence->executer();
-    } while (m_condition->executer());
+    } while (!m_condition->executer());
   return 0; // La valeur renvoyée ne représente rien !
 }
 void NoeudInstRepeter::traduitEnCPP(ostream & cout,unsigned int indentation) const {
@@ -200,9 +200,9 @@ void NoeudInstRepeter::traduitEnCPP(ostream & cout,unsigned int indentation) con
     //Corps
     m_sequence->traduitEnCPP(cout,indentation+1);
     //Fin
-    cout << setw(4*indentation) << "" << "} while (";
+    cout << setw(4*indentation) << "" << "} while (!(";
     m_condition->traduitEnCPP(cout,0);
-    cout << ");" << endl;
+    cout << "));" << endl;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

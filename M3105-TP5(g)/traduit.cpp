@@ -37,7 +37,7 @@ int main() {
                     cout << "q est égal à " << q;
                 } 
                 q=q-1;
-            } while (q>0);
+            } while (!(q>0));
             cout << "_____FIN DU REPETER_____";
         } else if (a==10) {
             cout << "a=10, entrer un nombre p:";

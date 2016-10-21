@@ -8,7 +8,7 @@ procedure principale()
     
     ; #Produit une erreur
 
-    j=10;
+    j=10
 
 
     repeter

@@ -36,8 +36,8 @@ int main(int argc, char* argv[]) {
             
             
             
-            //interpreteur.getArbre()->executer();    //Interprétation seule
-            interpreteur.traduitEnCPP(cout,0);      //Traduction C++
+            interpreteur.getArbre()->executer();    //Interprétation seule
+            //interpreteur.traduitEnCPP(cout,0);      //Traduction C++
         
         
         
