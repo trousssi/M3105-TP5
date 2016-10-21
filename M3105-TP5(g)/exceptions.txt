@@ -1,15 +1,12 @@
 procedure principale()
     i=0;
     
+    ecrire("Entrez 1 et 3 compris.")
 
-    ecrire("bonsoir, entrez un nombre entre 1 et 3 compris.")
-
-
-    tantque
-    fintantque
 
     lire(i)
-
+    
+    ; #Produit une erreur
 
     j=10;
 
@@ -23,11 +20,11 @@ procedure principale()
 
 
     si(i==1)
-        ecrire("bonsoir")
+        ecrire("i1")
     sinonsi(i==2)
-        ecrire("bonjour")
+        ecrire("i2")
     sinon
-        ecrire("salut")
+        ecrire("i+")
     finsi
 
 

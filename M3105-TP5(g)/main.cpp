@@ -13,13 +13,15 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     string nomFich;
+    
     if (argc != 2) {
         cout << "Usage : " << argv[0] << " nom_fichier_source" << endl << endl;
         cout << "Entrez le nom du fichier que voulez-vous interpréter : ";
         getline(cin, nomFich);
     } else
         nomFich = argv[1];
-    ifstream fichier(nomFich.c_str());
+    
+    ifstream fichier(nomFich.c_str());  
     try {
         Interpreteur interpreteur(fichier);
         interpreteur.analyse();
@@ -31,7 +33,14 @@ int main(int argc, char* argv[]) {
         // On exécute le programme si l'arbre n'est pas vide
         if (interpreteur.getArbre()!=nullptr){
             ofstream cout("traduit.cpp");
-            /*interpreteur.traduitEnCPP(cout,0);*/ interpreteur.getArbre()->executer();
+            
+            
+            
+            //interpreteur.getArbre()->executer();    //Interprétation seule
+            interpreteur.traduitEnCPP(cout,0);      //Traduction C++
+        
+        
+        
         } 
         // Et on vérifie qu'il a fonctionné en regardant comment il a modifié la table des symboles
         cout << endl << "================ Table des symboles apres exécution : " << interpreteur.getTable();

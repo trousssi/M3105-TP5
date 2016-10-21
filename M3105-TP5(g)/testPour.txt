@@ -17,23 +17,23 @@ procedure principale()
     ecrire("________________________")
     ecrire("2eme méthode: Fonction sans variable interne: pour(;condition;itération)")
     i = 5;
-    j = 0;
+    k = 0;
     ecrire("Avant fonction: i=",i)
-    ecrire("Avant fonction: (itérateur) j=", j)
-    pour (;j < 10; j=j+1) 
+    ecrire("Avant fonction: (itérateur) k=", k)
+    pour (;k < 10; k=k+1) 
         i = i+1;
     finpour
     ecrire("Après fonction: i=",i)
-    ecrire("Après fonction: j=",j)
+    ecrire("Après fonction: k=",k)
 
     ecrire("")
     ecrire("________________________")
     ecrire("3eme méthode: Fonction sans itération interne: pour(variable;condition;)")
     i = 5;
     ecrire("Avant fonction: i=",i)
-    pour (j = 0;j < 10;) 
+    pour (l = 0;l < 10;) 
         i = i+1; 
-        j = j+1;
+        l = l+1;
     finpour
     ecrire("Après fonction: i=",i)
 
@@ -41,15 +41,15 @@ procedure principale()
     ecrire("________________________")
     ecrire("4eme méthode: Fonction sans variable et itération internes: pour(;condition;) --> Reviens à faire un tantque")
     i = 5;
-    j = 0;
+    x = 0;
     ecrire("Avant fonction: i=",i)
-    ecrire("Avant fonction: (incrémenteur) j=", j)
-    pour (;j < 10;) 
+    ecrire("Avant fonction: (incrémenteur) x=", x)
+    pour (;x < 10;) 
         i = i+1;
-        j = j+1;
+        x = x+1;
     finpour
     ecrire("Après fonction: i=",i)
-    ecrire("Après fonction: j=",j)
+    ecrire("Après fonction: x=",x)
 
     ecrire("")
     ecrire("__________FIN DU TEST__________")

@@ -1,4 +1,7 @@
 procedure principale()
+    ecrire("_____________DEBUT DU PROGRAMME____________")
+    ecrire("")
+    ecrire("________PERMUTATION________")
     a = 0;
     b = 12;
     ecrire("permutation de a: ", a, " avec b: ", b)
@@ -6,18 +9,27 @@ procedure principale()
     a = b;
     b = c;
     ecrire("on obtient alors a = ", a, " et b = ", b)
+    ecrire("___FIN DE LA PERMUTATION___")
 
+    ecrire("")
+    ecrire("__________TANT QUE_________")
     tantque(a>0)
         a=a-1;
         si (a==3)
+            ecrire("")
+            ecrire("_____POUR_____")
             ecrire("a=3, alors b passe de:", b)
             pour (k=b;k>7;k=k-1)
                 b=b-1;
             finpour
-        ecrire("a la valeur: ",b)
+            ecrire("a la valeur: ",b)
+            ecrire("_____FIN DU POUR_____")
         sinonsi (a==6)
             ecrire("a=6, entrer un nombre q:")
             q=9;
+            ecrire("")
+            ecrire("_______REPETER_______")
+            
             repeter
                 si (q==4) 
                     ecrire("4x4")
@@ -26,18 +38,27 @@ procedure principale()
                 finsi
                 q=q-1;
             jusqua(q>0)
+            ecrire("_____FIN DU REPETER_____")
         sinonsi (a==10)
-            p=0;
             ecrire("a=10, entrer un nombre p:")
+            p=0;
+            ecrire("")
+            ecrire("________LIRE________")
             lire(p)
+            ecrire("")
+            ecrire("________POUR________")
             pour (;p>0;)
                 p=p-1;
             finpour
+            ecrire("p a décrémenté jusque ", p)
+            ecrire("_____FIN DU POUR_____")
         sinon
             ecrire("La boucle avance...et a = ", a, ".")
         finsi
     fintantque
+    ecrire("______FIN DU TANT QUE______")
 
 
-    ecrire("fin du programme.")
+    ecrire("")
+    ecrire("____________FIN DU PROGRAMME____________")
 finproc
